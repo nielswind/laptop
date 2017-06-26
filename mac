@@ -115,45 +115,40 @@ tap "thoughtbot/formulae"
 tap "homebrew/services"
 
 # Unix
-brew "ctags"
 brew "git"
 brew "openssl"
 brew "rcm"
-brew "reattach-to-user-namespace"
-brew "the_silver_searcher"
-brew "tmux"
 brew "vim"
 brew "watchman"
 brew "zsh"
 
-# Heroku
-brew "heroku-toolbelt"
-brew "parity"
-
 # GitHub
 brew "hub"
 
-# Image manipulation
-brew "imagemagick"
-
-# Testing
-brew "qt@5.5"
-
 # Programming languages and package managers
-brew "libyaml" # should come after openssl
 brew "node"
 brew "rbenv"
 brew "ruby-build"
 brew "yarn"
+brew "elixir"
 
 # Databases
 brew "postgres", restart_service: true
 brew "redis", restart_service: true
-EOF
 
-fancy_echo "Symlink qmake binary to /usr/local/bin for Capybara Webkit..."
-brew unlink qt@5.5
-brew link --force qt@5.5
+# Homebrew-Cask
+tap "caskroom/cask"
+brew "mas"
+
+# Cask apps
+# cask "sublime-text"
+cask "sketch"
+cask "alfred"
+
+# Mac App Store apps
+mas "Fantastical 2", id: 975937182
+mas "Slack", id: 803453959
+EOF
 
 fancy_echo "Configuring Ruby ..."
 find_latest_ruby() {
