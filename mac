@@ -152,6 +152,7 @@ cask "soulver"
 mas "Fantastical 2", id: 975937182
 mas "Slack", id: 803453959
 mas "Remote Desktop", id: 409907375
+mas "Blackmagic Disk Speed Test", id: 425264550
 EOF
 
 fancy_echo "Configuring Ruby ..."
