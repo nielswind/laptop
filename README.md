@@ -1,16 +1,14 @@
-Laptop
-======
+# Laptop
 
-Laptop is a script to set up an macOS laptop for web and mobile development.
+Laptop is a fork of [thoughtbot/laptop](https://github.com/thoughtbot/laptop) and is meant for private usage. Although you are welcome borrow any ideas for your own use to set up macOS on your laptop for development.
 
-It can be run multiple times on the same machine safely.
+> It can be run multiple times on the same machine safely.
 It installs, upgrades, or skips packages
 based on what is already installed on the machine.
 
-Requirements
-------------
+# Requirements
 
-We support:
+Supports:
 
 * macOS Mavericks (10.9)
 * macOS Yosemite (10.10)
@@ -20,8 +18,7 @@ We support:
 Older versions may work but aren't regularly tested.
 Bug reports for older versions are welcome.
 
-Install
--------
+# Install
 
 Download, review, then execute the script:
 
@@ -30,10 +27,6 @@ curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/ma
 less mac
 sh mac 2>&1 | tee ~/laptop.log
 ```
-
-Optionally, [install thoughtbot/dotfiles][dotfiles].
-
-[dotfiles]: https://github.com/thoughtbot/dotfiles#install
 
 Debugging
 ---------
