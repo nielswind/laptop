@@ -141,19 +141,11 @@ tap "caskroom/cask"
 brew "mas"
 
 # Cask apps
-cask "sublime-text"
+cask "visual-studio-code"
 cask "sketch"
 cask "alfred"
 cask "macdown"
-cask "omnifocus"
 cask "soulver"
-
-# Mac App Store apps
-mas "Fantastical 2", id: 975937182
-mas "Slack", id: 803453959
-mas "Remote Desktop", id: 409907375
-mas "Blackmagic Disk Speed Test", id: 425264550
-mas "1Password - Password Manager and Secure Wallet", id: 443987910
 EOF
 
 fancy_echo "Configuring Ruby ..."
