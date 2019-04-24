@@ -172,6 +172,7 @@ cask "intellij-idea"
 cask "datagrip"
 cask "webstorm"
 cask "atom"
+cask "iterm2"
 
 # mas apps
 mas "Simplenote", id: 692867256
