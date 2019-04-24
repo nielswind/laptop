@@ -35,8 +35,8 @@ trap 'ret=$?; test $ret -ne 0 && printf "failed\n\n" >&2; exit $ret' EXIT
 
 set -e
 
-if [ ! -d "$HOME/.bin/" ]; then
-  mkdir "$HOME/.bin"
+if [ ! -d "$HOME/bin/" ]; then
+  mkdir "$HOME/bin"
 fi
 
 if [ ! -f "$HOME/.zshrc" ]; then
@@ -81,14 +81,6 @@ case "$SHELL" in
     ;;
 esac
 
-gem_install_or_update() {
-  if gem list "$1" --installed > /dev/null; then
-    gem update "$@"
-  else
-    gem install "$@"
-    rbenv rehash
-  fi
-}
 
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew ..."
@@ -115,26 +107,50 @@ tap "thoughtbot/formulae"
 tap "homebrew/services"
 
 # Unix
+brew "ansible"
+brew "azure-cli"
+brew "bash"
+brew "certbot"
+brew "consul"
+brew "doctl"
 brew "git"
+brew "git-flow"
+brew "go"
+brew "gox"
+brew "jq"
+brew "keybase"
+brew "kubernetes-cli"
+brew "kubernetes-helm"
+brew "maven"
+brew "minisign"
+brew "nomad"
 brew "openssl"
+brew "pv"
+brew "python"
+brew "python3"
+brew "python@2"
 brew "rcm"
+brew "readline"
+brew "terminal-notifier"
+brew "terraform"
+brew "the_silver_searcher"
+brew "tig"
+brew "tree"
+brew "vault"
 brew "vim"
 brew "watchman"
 brew "zsh"
+brew "plantuml"
 
 # GitHub
 brew "hub"
 
-# Programming languages and package managers
-brew "node"
-brew "rbenv"
-brew "ruby-build"
-brew "yarn"
-brew "elixir"
+# nvm / node
+brew "nvm"
+#export NVM_DIR=~/.nvm
+#source $(brew --prefix nvm)/nvm.sh
+#source ~/.bash_profile
 
-# Databases
-brew "postgres", restart_service: :changed
-brew "redis", restart_service: :changed
 
 # Homebrew-Cask
 tap "caskroom/cask"
@@ -143,31 +159,30 @@ brew "mas"
 # Cask apps
 cask "visual-studio-code"
 cask "sketch"
-cask "alfred"
 cask "macdown"
 cask "soulver"
+cask "vlc"
+cask "typora"
+cask "zoomus"
+cask "paw"
+cask "telegram"
+cask "meld"
+cask "firefox"
+cask "intellij-idea"
+cask "datagrip"
+cask "webstorm"
+cask "atom"
+
+# mas apps
+mas "Simplenote", id: 692867256
+mas "NordVPN IKE", id: 1116599239 
+mas "LastPass", id: 926036361
+mas "Growl", id: 467939042
+mas "HardwareGrowler", id: 475260933
+mas "Big Mean Folder Machine 2", id: 402440280
+mas "ForkLift", id: 412448059
+
 EOF
-
-fancy_echo "Configuring Ruby ..."
-find_latest_ruby() {
-  rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//'
-}
-
-ruby_version="$(find_latest_ruby)"
-# shellcheck disable=SC2016
-append_to_zshrc 'eval "$(rbenv init - --no-rehash)"' 1
-eval "$(rbenv init -)"
-
-if ! rbenv versions | grep -Fq "$ruby_version"; then
-  RUBY_CONFIGURE_OPTS=--with-openssl-dir=/usr/local/opt/openssl rbenv install -s "$ruby_version"
-fi
-
-rbenv global "$ruby_version"
-rbenv shell "$ruby_version"
-gem update --system
-gem_install_or_update 'bundler'
-number_of_cores=$(sysctl -n hw.ncpu)
-bundle config --global jobs $((number_of_cores - 1))
 
 if [ -f "$HOME/.laptop.local" ]; then
   fancy_echo "Running your customizations from ~/.laptop.local ..."
