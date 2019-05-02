@@ -141,6 +141,7 @@ brew "vim"
 brew "watchman"
 brew "zsh"
 brew "plantuml"
+brew "lnav"
 
 # GitHub
 brew "hub"
