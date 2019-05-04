@@ -118,10 +118,11 @@ brew "git-flow"
 brew "go"
 brew "gox"
 brew "jq"
-brew "keybase"
+brew "yq"
 brew "kubernetes-cli"
 brew "kubernetes-helm"
 brew "maven"
+brew "netcat"
 brew "minisign"
 brew "nomad"
 brew "openssl"
@@ -143,6 +144,16 @@ brew "zsh"
 brew "plantuml"
 brew "lnav"
 
+brew "figlet"
+brew "ffmpeg"
+brew "flac"
+brew "flyway"
+brew "kubectx"
+brew "ssh-copy-id"
+brew "dos2unix"
+brew "wget"
+brew "parquet-tools"
+
 # GitHub
 brew "hub"
 
@@ -159,9 +170,7 @@ brew "mas"
 
 # Cask apps
 cask "visual-studio-code"
-cask "sketch"
 cask "macdown"
-cask "soulver"
 cask "vlc"
 cask "typora"
 cask "zoomus"
@@ -174,15 +183,34 @@ cask "datagrip"
 cask "webstorm"
 cask "atom"
 cask "iterm2"
+cask "ngrok"
+cask "minikube"
+cask "spectacle"
+cask "vagrant"
+cask "vagrant-manager"
+cask "virtualbox"
+cask "knockknock"
+cask "syncthing"
+cask "obs"
+cask "keybase"
+cask "arduino"
+cask "0xed"
+#cask "flux"
+cask "balenaetcher"
+cask "alfred2"
+
 
 # mas apps
 mas "Simplenote", id: 692867256
 mas "NordVPN IKE", id: 1116599239 
 mas "LastPass", id: 926036361
-mas "Growl", id: 467939042
-mas "HardwareGrowler", id: 475260933
-mas "Big Mean Folder Machine 2", id: 402440280
-mas "ForkLift", id: 412448059
+#mas "Growl", id: 467939042
+#mas "HardwareGrowler", id: 475260933
+#mas "Big Mean Folder Machine 2", id: 402440280
+#mas "ForkLift", id: 412448059
+mas "Flycut", id: 442160987
+#mas "Xcode", id: 497799835
+mas "Slack", id: 803453959
 
 EOF
 
