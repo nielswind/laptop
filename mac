@@ -197,7 +197,7 @@ cask "arduino"
 cask "0xed"
 #cask "flux"
 cask "balenaetcher"
-cask "alfred2"
+#cask "alfred2"
 
 
 # mas apps
