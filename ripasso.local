@@ -2,6 +2,8 @@
 fancy_echo "#################### Local $HOSTNAME setup ..."
 brew bundle --file=- <<EOF
 
+cask "obs"
+
 mas "DiveLogManager", id: 404897036
 
 EOF
