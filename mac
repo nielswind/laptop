@@ -143,7 +143,6 @@ brew "watchman"
 brew "zsh"
 brew "plantuml"
 brew "lnav"
-
 brew "figlet"
 brew "ffmpeg"
 brew "flac"
@@ -153,6 +152,10 @@ brew "ssh-copy-id"
 brew "dos2unix"
 brew "wget"
 brew "parquet-tools"
+
+brew "tmux"
+brew "coreutils"
+# pip install --user powerline-status
 
 # GitHub
 brew "hub"
