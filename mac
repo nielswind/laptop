@@ -119,8 +119,6 @@ brew "go"
 brew "gox"
 brew "jq"
 brew "yq"
-brew "kubernetes-cli"
-brew "kubernetes-helm"
 brew "maven"
 brew "netcat"
 brew "minisign"
@@ -148,17 +146,22 @@ brew "figlet"
 brew "ffmpeg"
 brew "flac"
 brew "flyway"
-brew "kubectx"
 brew "ssh-copy-id"
 brew "dos2unix"
 brew "wget"
-brew "parquet-tools"
+#brew "parquet-tools"
 
 brew "fpp"
 brew "fzf"
 brew "tmux"
 brew "coreutils"
 # pip install --user powerline-status
+
+# kubernetes
+brew "kubernetes-cli"
+brew "kubernetes-helm"
+#brew "kind"
+brew "k3d"
 
 # GitHub
 brew "hub"
